@@ -1,6 +1,6 @@
 get_filename_component(target ${CMAKE_CURRENT_LIST_DIR} NAME)
 
-set(SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/../../cppzmq-master)
+set(SOURCE_DIR ${LIB3RD_HOME_DIR}/cppzmq-master)
 
 add_library(${target} INTERFACE)
 
