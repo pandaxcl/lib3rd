@@ -8,3 +8,10 @@ add_subdirectory(boost_1_67_0)
 add_subdirectory(zeromq-4.2.3)
 add_subdirectory(cppzmq)
 
+add_library(lib3rd.downloaded STATIC "")
+target_sources(lib3rd.downloaded PRIVATE ../lib3rd/lib3rd.cpp)
+target_link_libraries(lib3rd.downloaded PUBLIC
+	boost_1_67_0
+	zeromq-4.2.3
+	cppzmq
+)
