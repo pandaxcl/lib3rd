@@ -1,6 +1,6 @@
 get_filename_component(target ${CMAKE_CURRENT_LIST_DIR} NAME)
 
-set(SOURCE_DIR ${LIB3RD_REPO_DOWNLOADED_DIR}/cppzmq.git)
+set(SOURCE_DIR ${LIB3RD_REPO_DOWNLOADED_DIR}/RxCpp.git/Rx/v2/src)
 
 add_library(${target} INTERFACE)
 
