@@ -7,3 +7,6 @@
 [submodule "lib3rd.downloaded/RxCpp.git"]
 	path = lib3rd.downloaded/RxCpp.git
 	url = https://github.com/ReactiveX/RxCpp.git
+[submodule "lib3rd.downloaded/cpplinq.git"]
+	path = lib3rd.downloaded/cpplinq.git
+	url = https://github.com/mrange/cpplinq.git
