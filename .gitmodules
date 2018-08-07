@@ -1,3 +1,6 @@
 [submodule "lib3rd.downloaded/cppzmq.git"]
 	path = lib3rd.downloaded/cppzmq.git
 	url = https://github.com/zeromq/cppzmq.git
+[submodule "lib3rd.downloaded/Catch2.git"]
+	path = lib3rd.downloaded/Catch2.git
+	url = https://github.com/catchorg/Catch2.git
