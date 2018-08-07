@@ -4,3 +4,6 @@
 [submodule "lib3rd.downloaded/Catch2.git"]
 	path = lib3rd.downloaded/Catch2.git
 	url = https://github.com/catchorg/Catch2.git
+[submodule "lib3rd.downloaded/RxCpp.git"]
+	path = lib3rd.downloaded/RxCpp.git
+	url = https://github.com/ReactiveX/RxCpp.git
