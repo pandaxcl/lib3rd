@@ -6,6 +6,7 @@ add_library(${target} STATIC "")
 
 
 file(GLOB_RECURSE x ${SOURCE_DIR}/src/*.hpp ${SOURCE_DIR}/src/*.cpp)
+list(REMOVE_ITEM x random.hpp random.cpp)
 list(APPEND sources ${x})
 
 target_sources(${target} PRIVATE ${sources})
