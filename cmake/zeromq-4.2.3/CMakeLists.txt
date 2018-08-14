@@ -10,6 +10,7 @@ list(REMOVE_ITEM x random.hpp random.cpp)
 list(APPEND sources ${x})
 
 target_sources(${target} PRIVATE ${sources})
+source_group(TREE ${SOURCE_DIR} FILES ${sources})
 
 
 target_include_directories(${target} PUBLIC ${SOURCE_DIR}/include)
