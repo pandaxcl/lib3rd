@@ -13,3 +13,6 @@
 [submodule "lib3rd.downloaded/libxml2.git"]
 	path = lib3rd.downloaded/libxml2.git
 	url = git://git.gnome.org/libxml2
+[submodule "lib3rd.downloaded/libxslt.git"]
+	path = lib3rd.downloaded/libxslt.git
+	url = https://gitlab.gnome.org/GNOME/libxslt.git
