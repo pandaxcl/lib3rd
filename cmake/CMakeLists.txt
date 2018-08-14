@@ -12,8 +12,8 @@ add_subdirectory(cppzmq)
 add_subdirectory(catch2)
 add_subdirectory(rxcpp)
 add_subdirectory(cpplinq)
-add_subdirectory(libxml2)
-add_subdirectory(libxslt)
+#add_subdirectory(libxml2)
+#add_subdirectory(libxslt)
 
 add_library(lib3rd.downloaded STATIC "")
 target_sources(lib3rd.downloaded PRIVATE ../lib3rd/lib3rd.cpp)
@@ -24,6 +24,6 @@ target_link_libraries(lib3rd.downloaded PUBLIC
 	catch2
 	rxcpp
 	cpplinq
-	libxml2
-	libxslt
+	#libxml2
+	#libxslt
 )
