@@ -1,6 +1,6 @@
 get_filename_component(target ${CMAKE_CURRENT_LIST_DIR} NAME)
 
-set(SOURCE_DIR ${LIB3RD_HOME_DIR}/boost_1_67_0)
+set(SOURCE_DIR ${LIB3RD_REPO_DIR}/lib3rd.downloaded/boost_1_67_0)
 
 
 add_library(${target} STATIC "")

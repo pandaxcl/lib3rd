@@ -1,6 +1,6 @@
 get_filename_component(target ${CMAKE_CURRENT_LIST_DIR} NAME)
 
-set(SOURCE_DIR ${LIB3RD_HOME_DIR}/zeromq-4.2.3)
+set(SOURCE_DIR ${LIB3RD_REPO_DIR}/lib3rd.downloaded/zeromq-4.2.3)
 
 add_library(${target} STATIC "")
 
