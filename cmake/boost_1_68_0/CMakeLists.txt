@@ -26,8 +26,23 @@ list(APPEND sources ${x})
 file(GLOB_RECURSE x ${SOURCE_DIR}/libs/regex/src/*.cpp)
 list(APPEND sources ${x})
 
+file(GLOB_RECURSE x ${SOURCE_DIR}/libs/log/src/*.hpp ${SOURCE_DIR}/libs/log/src/*.cpp)
+file(GLOB_RECURSE y ${SOURCE_DIR}/libs/log/src/windows/*.*)
+list(APPEND y ${SOURCE_DIR}/libs/log/src/dump_avx2.cpp)
+list(REMOVE_ITEM x ${y})
+list(APPEND sources ${x})
+
+file(GLOB_RECURSE x ${SOURCE_DIR}/libs/thread/src/*.cpp)
+file(GLOB_RECURSE y ${SOURCE_DIR}/libs/thread/src/win32/*.*)
+list(REMOVE_ITEM x ${y})
+list(APPEND sources ${x})
+
+
 
 source_group(TREE ${SOURCE_DIR} FILES ${sources})
 target_sources(${target} PRIVATE ${sources})
 
-target_include_directories(${target} PUBLIC ${SOURCE_DIR})
+target_include_directories(${target}
+    PUBLIC ${SOURCE_DIR}
+    PRIVATE ${SOURCE_DIR}/libs/log/src
+)
