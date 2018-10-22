@@ -37,6 +37,8 @@ file(GLOB_RECURSE y ${SOURCE_DIR}/libs/thread/src/win32/*.*)
 list(REMOVE_ITEM x ${y})
 list(APPEND sources ${x})
 
+file(GLOB_RECURSE x ${SOURCE_DIR}/libs/graph/src/*.cpp)
+list(APPEND sources ${x})
 
 
 source_group(TREE ${SOURCE_DIR} FILES ${sources})
