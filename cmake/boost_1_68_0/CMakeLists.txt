@@ -40,6 +40,9 @@ list(APPEND sources ${x})
 file(GLOB_RECURSE x ${SOURCE_DIR}/libs/graph/src/*.cpp)
 list(APPEND sources ${x})
 
+file(GLOB_RECURSE x ${SOURCE_DIR}/libs/system/src/*.cpp)
+list(APPEND sources ${x})
+
 
 source_group(TREE ${SOURCE_DIR} FILES ${sources})
 target_sources(${target} PRIVATE ${sources})
