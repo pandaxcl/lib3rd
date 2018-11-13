@@ -14,4 +14,5 @@ add_subdirectory(rxcpp)
 add_subdirectory(cpplinq)
 #add_subdirectory(libxml2)
 #add_subdirectory(libxslt)
+add_subdirectory(clips-6_40-beta3)
 
