@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.11)
 #set(LIB3RD_HOME_DIR ${HOME}/gift/lib3rd.downloaded)
 set(LIB3RD_REPO_DIR ${CMAKE_CURRENT_LIST_DIR}/..)
 set(LIB3RD_REPO_DOWNLOADED_DIR ${LIB3RD_REPO_DIR}/lib3rd.downloaded)
+set (CMAKE_CXX_STANDARD 14)
 
 project(lib3rd.downloaded)
 #add_subdirectory(boost_1_67_0)
@@ -15,4 +16,5 @@ add_subdirectory(cpplinq)
 #add_subdirectory(libxml2)
 #add_subdirectory(libxslt)
 add_subdirectory(clips-6_40-beta3)
+add_subdirectory(mstch)
 
