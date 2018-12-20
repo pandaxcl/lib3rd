@@ -17,4 +17,5 @@ add_subdirectory(cpplinq)
 #add_subdirectory(libxslt)
 add_subdirectory(clips-6_40-beta3)
 add_subdirectory(mstch)
+add_subdirectory(yoga)
 

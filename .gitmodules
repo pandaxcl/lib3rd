@@ -19,3 +19,6 @@
 [submodule "lib3rd.downloaded/mstch.git"]
 	path = lib3rd.downloaded/mstch.git
 	url = https://github.com/no1msd/mstch.git
+[submodule "lib3rd.downloaded/yoga.git"]
+	path = lib3rd.downloaded/yoga.git
+	url = https://github.com/facebook/yoga.git
