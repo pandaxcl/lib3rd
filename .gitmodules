@@ -22,3 +22,6 @@
 [submodule "lib3rd.downloaded/yoga.git"]
 	path = lib3rd.downloaded/yoga.git
 	url = https://github.com/facebook/yoga.git
+[submodule "lib3rd.downloaded/libzmq.git"]
+	path = lib3rd.downloaded/libzmq.git
+	url = https://github.com/zeromq/libzmq.git
