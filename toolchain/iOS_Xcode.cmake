@@ -1,5 +1,6 @@
 # Standard settings
-set (CMAKE_SYSTEM_NAME iOS)
+#set (CMAKE_SYSTEM_NAME iOS)
+set (CMAKE_SYSTEM_NAME Darwin)
 # Include extra modules for the iOS platform files
 set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/modules")
 
