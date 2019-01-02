@@ -18,4 +18,4 @@ target_include_directories(${target}
 )
 set_target_properties(${target} PROPERTIES FOLDER gift_lib3rd)
 
-
+target_compile_definitions(${target} PUBLIC -DSTANDALONE=0)
