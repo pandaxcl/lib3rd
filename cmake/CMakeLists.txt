@@ -18,4 +18,5 @@ add_subdirectory(tinyscheme-1.41)
 add_subdirectory(clips-6_40-beta3)
 add_subdirectory(mstch)
 add_subdirectory(yoga)
+add_subdirectory(lib3rd)
 

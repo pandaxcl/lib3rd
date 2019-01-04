@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.11)
 
 set(LIB3RD_REPO_DIR ${CMAKE_CURRENT_LIST_DIR})
 set(LIB3RD_REPO_DOWNLOADED_DIR ${LIB3RD_REPO_DIR}/lib3rd.downloaded)
-set (CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_OSX_DEPLOYMENT_TARGET "10.9" CACHE STRING "Minimum OS X deployment version")
 
 project(lib3rd.downloaded)
 add_subdirectory(cmake)
