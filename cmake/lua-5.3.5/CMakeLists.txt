@@ -1,6 +1,6 @@
 get_filename_component(target ${CMAKE_CURRENT_LIST_DIR} NAME)
 
-set(SOURCE_DIR ${LIB3RD_REPO_DIR}/lib3rd.downloaded/lua-5.3.5)
+set(SOURCE_DIR ${LIB3RD_REPO_DIR}/lib3rd.downloaded/lua-5.3.5.git/lua-5.3.5)
 
 add_library(${target} STATIC "")
 
