@@ -28,10 +28,6 @@
 [submodule "lib3rd.downloaded/ios-cmake.git"]
 	path = lib3rd.downloaded/ios-cmake.git
 	url = https://github.com/leetal/ios-cmake.git
-[submodule "lib3rd.downloaded/tinyscheme-1.41.git"]
-	path = lib3rd.downloaded/tinyscheme-1.41.git
-	url = https://github.com/pandaxcl/lib3rd.git
-	branch = tinyscheme-1.41
 [submodule "lib3rd.downloaded/lua-5.3.5.git"]
 	path = lib3rd.downloaded/lua-5.3.5.git
 	url = https://github.com/pandaxcl/lib3rd.git
