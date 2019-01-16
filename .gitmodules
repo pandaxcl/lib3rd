@@ -40,3 +40,7 @@
 	path = lib3rd.downloaded/clips_core_source_640.git
 	url = https://github.com/pandaxcl/lib3rd.git
 	branch = clips_core_source_640
+[submodule "lib3rd.downloaded/scheme.gift/s7.git"]
+	path = lib3rd.downloaded/scheme.gift/s7.git
+	url = https://github.com/pandaxcl/lib3rd.git
+	branch = s7
