@@ -14,7 +14,7 @@ source_group(TREE ${SOURCE_DIR} FILES ${sources})
 
 target_include_directories(${target}
     PUBLIC ${SOURCE_DIR}
-    #PRIVATE ${SOURCE_DIR}/src ${LIB3RD_REPO_DOWNLOADED_DIR}/boost_1_69_0 
+	PRIVATE ${LIB3RD_REPO_DIR}/lib3rd/include/s7
 )
 set_target_properties(${target} PROPERTIES FOLDER gift_lib3rd)
 
