@@ -1,6 +1,6 @@
 get_filename_component(target ${CMAKE_CURRENT_LIST_DIR} NAME)
 
-set(SOURCE_DIR ${LIB3RD_REPO_DIR}/lib3rd.downloaded/tinyscheme-1.41.git/tinyscheme-1.41)
+set(SOURCE_DIR ${LIB3RD_REPO_DIR}/lib3rd.downloaded/scheme.gift/tinyscheme-1.41.git/tinyscheme-1.41)
 
 add_library(${target} STATIC "")
 
