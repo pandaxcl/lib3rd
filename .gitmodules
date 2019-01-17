@@ -52,3 +52,7 @@
 	path = lib3rd.downloaded/scheme.gift/minischeme-0.85k4.git
 	url = https://github.com/pandaxcl/lib3rd.git
 	branch = minischeme-0.85k4
+[submodule "lib3rd.downloaded/scheme.gift/tinyscheme-1.31.git"]
+	path = lib3rd.downloaded/scheme.gift/tinyscheme-1.31.git
+	url = https://github.com/pandaxcl/lib3rd.git
+	branch = tinyscheme-1.31
