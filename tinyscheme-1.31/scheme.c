@@ -60,7 +60,7 @@
 #ifndef macintosh
 # include <malloc.h>
 #else
-static int stricmp(const char *s1, const char *s2)
+int stricmp(const char *s1, const char *s2)
 {
   unsigned char c1, c2;
   do {
@@ -568,7 +568,7 @@ static int alloc_cellseg(scheme *sc, int n) {
 	  i = ++sc->last_cell_seg ;
 	  sc->alloc_seg[i] = cp;
 	  /* adjust in TYPE_BITS-bit boundary */
-	  if(((int)cp)%adj!=0) {
+	  if(((long)cp)%adj!=0) {
 	    cp=(char*)(adj*((long)cp/adj+1));
 	  }
         /* insert new segment in address order */
@@ -1203,7 +1203,7 @@ static pointer port_from_filename(scheme *sc, const char *fn, int prop) {
 static port *port_rep_from_file(scheme *sc, FILE *f, int prop) {
   char *rw;
   port *pt;
-  pt=sc->malloc(sizeof(port));
+  pt=(port*)sc->malloc(sizeof(port));
   if(pt==0) {
     return 0;
   }
@@ -1231,7 +1231,7 @@ static pointer port_from_file(scheme *sc, FILE *f, int prop) {
 
 static port *port_rep_from_string(scheme *sc, char *start, char *past_the_end, int prop) {
   port *pt;
-  pt=sc->malloc(sizeof(port));
+  pt=(port*)sc->malloc(sizeof(port));
   if(pt==0) {
     return 0;
   }
@@ -3660,7 +3660,7 @@ static void Eval_Cycle(scheme *sc, enum scheme_opcodes op) {
       }
     }
     old_op=sc->op;
-    if (pcd->func(sc, sc->op) == sc->NIL) {
+    if (pcd->func(sc, (enum scheme_opcodes)sc->op) == sc->NIL) {
       return;
     }
     if(sc->no_memory) {
@@ -3909,7 +3909,7 @@ int scheme_init_custom_alloc(scheme *sc, func_alloc malloc, func_dealloc free) {
   
   for(i=0; i<n; i++) {
     if(dispatch_table[i].name!=0) {
-      assign_proc(sc, i, dispatch_table[i].name);
+      assign_proc(sc, (enum scheme_opcodes)i, dispatch_table[i].name);
     }
   }
 
