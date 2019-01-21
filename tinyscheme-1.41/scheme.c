@@ -1456,7 +1456,7 @@ static port *port_rep_from_scratch(scheme *sc) {
   if(pt==0) {
     return 0;
   }
-  start=sc->malloc(BLOCK_SIZE);
+  start=(char*)sc->malloc(BLOCK_SIZE);
   if(start==0) {
     return 0;
   }
@@ -1549,7 +1549,7 @@ static int realloc_port_string(scheme *sc, port *p)
 {
   char *start=p->rep.string.start;
   size_t new_size=p->rep.string.past_the_end-start+1+BLOCK_SIZE;
-  char *str=sc->malloc(new_size);
+  char *str=(char*)sc->malloc(new_size);
   if(str) {
     memset(str,' ',new_size-1);
     str[new_size-1]='\0';
@@ -2614,7 +2614,7 @@ static pointer opexe_0(scheme *sc, enum scheme_opcodes op) {
                sc->args = sc->NIL;
                s_goto(sc,OP_EVAL);
           } else {  /* end */
-               sc->args = reverse_in_place(sc, sc->NIL, sc->args);
+               sc->args = reverse(sc, sc->args);
                sc->code = car(sc->args);
                sc->args = cdr(sc->args);
                s_goto(sc,OP_APPLY);
@@ -2819,7 +2819,7 @@ static pointer opexe_0(scheme *sc, enum scheme_opcodes op) {
                sc->args = sc->NIL;
                s_goto(sc,OP_EVAL);
           } else {  /* end */
-               sc->args = reverse_in_place(sc, sc->NIL, sc->args);
+               sc->args = reverse(sc, sc->args);
                sc->code = car(sc->args);
                sc->args = cdr(sc->args);
                s_goto(sc,OP_LET2);
@@ -2909,7 +2909,7 @@ static pointer opexe_1(scheme *sc, enum scheme_opcodes op) {
                sc->args = sc->NIL;
                s_goto(sc,OP_EVAL);
           } else {  /* end */
-               sc->args = reverse_in_place(sc, sc->NIL, sc->args);
+               sc->args = reverse(sc, sc->args);
                sc->code = car(sc->args);
                sc->args = cdr(sc->args);
                s_goto(sc,OP_LET2REC);
@@ -3944,7 +3944,7 @@ static pointer opexe_4(scheme *sc, enum scheme_opcodes op) {
                char *str;
 
                size=p->rep.string.curr-p->rep.string.start+1;
-               str=sc->malloc(size);
+               str=(char*)sc->malloc(size);
                if(str != NULL) {
                     pointer s;
 
